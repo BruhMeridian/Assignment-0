@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Stoic Quotes Generator</title>
+</head>
+<body>
+  <div id="quote-container">
+    <h1>Quotes to remind you whenever you feel low</h1>
+    <p id="quote">"You will be reading few quotes related to stoicism""</p>
+    <button id="refresh-button">Refresh</button>
+  </div>
+
+  <script>
+    const quotes = [
+    "Steel your sensibilities, so that life shall hurt you as little as possible.",
+      "The world is like a market place. Some come to buy and some come to sell. We must make sure that we do not fall into the traps of buying what is not truly valuable or selling what is.",
+      "It is not the things themselves that disturb people, but their judgments about these things.",
+      "Man is disturbed not by things, but by the views he takes of them.",
+      "The happiness of your life depends upon the quality of your thoughts.",
+      "Waste no more time arguing about what a good man should be. Be one.",
+      "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
+      "We suffer more often in imagination than in reality.",
+      "What really ruins our character is the fact that none of us looks back over his life",
+      "The Only thing we can truly control is where we place our attention and where we place our effort. Choose WISELY.",
+      "The path of least resistance is a terrible teacher.",
+    ];
+
+    const quoteElement = document.getElementById("quote");
+    const refreshButton = document.getElementById("refresh-button");
+
+    refreshButton.addEventListener("click", function() {
+      const randomIndex = Math.floor(Math.random() * quotes.length);
+      quoteElement.textContent = `"${quotes[randomIndex]}"`;
+    });
+  </script>
+</body>
+</html>
