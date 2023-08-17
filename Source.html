@@ -3,28 +3,66 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  body {
+    font-family: 'Garamond', serif;
+    background-color: #1a1a1a;
+    color: #ffffff;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  .container {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+  h1 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  #quote {
+    font-style: italic;
+  }
+  #refresh-button {
+    background-color: #007bff;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+  }
+  #refresh-button:hover {
+    background-color: #0056b3;
+  }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Garamond&display=swap" rel="stylesheet">
 <title>Stoic Quotes Generator</title>
 </head>
 <body>
-  <div id="quote-container">
-    <h1>Quotes to remind you whenever you feel low</h1>
-    <p id="quote">"You will be reading few quotes related to stoicism""</p>
+  <div class="container">
+    <h1>Stoic Quotes Generator</h1>
+    <p id="quote">"Placeholder Quote"</p>
     <button id="refresh-button">Refresh</button>
   </div>
 
   <script>
     const quotes = [
-    "Steel your sensibilities, so that life shall hurt you as little as possible.",
+      "The chief task in life is simply this: to identify and separate matters so that I can say clearly to myself which are externals not under my control, and which have to do with the choices I actually control.",
       "The world is like a market place. Some come to buy and some come to sell. We must make sure that we do not fall into the traps of buying what is not truly valuable or selling what is.",
       "It is not the things themselves that disturb people, but their judgments about these things.",
       "Man is disturbed not by things, but by the views he takes of them.",
       "The happiness of your life depends upon the quality of your thoughts.",
       "Waste no more time arguing about what a good man should be. Be one.",
-      "Accept the things to which fate binds you, and love the people with whom fate brings you together, but do so with all your heart.",
-      "We suffer more often in imagination than in reality.",
-      "What really ruins our character is the fact that none of us looks back over his life",
-      "The Only thing we can truly control is where we place our attention and where we place our effort. Choose WISELY.",
-      "The path of least resistance is a terrible teacher.",
     ];
 
     const quoteElement = document.getElementById("quote");
